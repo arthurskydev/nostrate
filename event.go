@@ -4,10 +4,11 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 	"fmt"
+	"time"
+
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/btcec/v2/schnorr"
 	"github.com/goccy/go-json"
-	"time"
 )
 
 type Event struct {
@@ -26,19 +27,19 @@ type Tags map[string][]string
 type Kind int
 
 const (
-	KindSetMetadata            Kind = 0
-	KindTextNote               Kind = 1
-	KindRecommendServer        Kind = 2
-	KindContactList            Kind = 3
-	KindEncryptedDirectMessage Kind = 4
-	KindDeletion               Kind = 5
-	KindBoost                  Kind = 6
-	KindReaction               Kind = 7
-	KindChannelCreation        Kind = 40
-	KindChannelMetadata        Kind = 41
-	KindChannelMessage         Kind = 42
-	KindChannelHideMessage     Kind = 43
-	KindChannelMuteUser        Kind = 44
+	SetMetadata            Kind = 0
+	TextNote               Kind = 1
+	RecommendServer        Kind = 2
+	ContactList            Kind = 3
+	EncryptedDirectMessage Kind = 4
+	Deletion               Kind = 5
+	Boost                  Kind = 6
+	Reaction               Kind = 7
+	ChannelCreation        Kind = 40
+	ChannelMetadata        Kind = 41
+	ChannelMessage         Kind = 42
+	ChannelHideMessage     Kind = 43
+	ChannelMuteUser        Kind = 44
 )
 
 func (e *Event) GetHash() ([]byte, error) {

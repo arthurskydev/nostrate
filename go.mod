@@ -1,6 +1,6 @@
 go 1.19
 
-module gitub.com/arthurskydev/nostrate
+module github.com/arthurskydev/nostrate
 
 require (
 	github.com/btcsuite/btcd/btcec/v2 v2.3.2

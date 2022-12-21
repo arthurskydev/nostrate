@@ -1,3 +1,9 @@
 # go files
 go.sum
 go.work
+
+# JetBrains metadata
+.idea/
+
+# macOs metadata
+.DS_Store
